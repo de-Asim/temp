@@ -59,16 +59,14 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     padding: 2rem 3rem;
 }
-
+/* head */
 #receipt_head{
-    /* border: 2px solid green; */
     height: 4rem;
     display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
 }
 #receipt_head_logo{
-    /* border: 2px solid yellow; */
     height: 100%;
 }
 #receipt_head_logo img{
@@ -92,7 +90,6 @@
 }
 /* body */
 #receipt_body{
-    /* border: 2px solid blue; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -113,7 +110,6 @@
 }
 /* details */
 #receipt_details{
-    /* border: 2px solid chocolate; */
     width: 45%;
     margin-bottom: 3rem;
 }
@@ -127,6 +123,7 @@
     padding-bottom: 7px;
     color: var(--receipt_text);
 }
+/* signature */
 #receipt_sign{
     text-align: end;
 }
