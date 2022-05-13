@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+*{
+    font-family: 'Bitter', serif;
+}
+:root{
+    --receipt_text:rgb(50, 50, 50);
+    --receipt_triangle:rgba(205, 22, 22, 0.492);
+    --receipt_font1:0.9rem;
+    --receipt_font2:0.8rem;
+}
+#receipt_parent{
+    display: flex;
+
+}
+.triangle_topright{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+}
+#triangle_topright1{
+    border-top: 300px solid var(--receipt_triangle);
+    border-left: 50px solid transparent;
+}
+#triangle_topright2{
+    border-top: 100px solid var(--receipt_triangle);
+    border-left: 100px solid transparent;
+}
+#triangle_topright3{
+    border-top: 50px solid var(--receipt_triangle);
+    border-left: 300px solid transparent;
+}
+#triangle_bottomleft1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 50px solid var(--receipt_triangle);
+    border-right: 35rem solid transparent;
+  }
+#triangle_bottomleft2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 300px solid var(--receipt_triangle);
+    border-right: 50px solid transparent;
+  }
+#receipt{
+    position: relative;
+    width: 90%;
+    aspect-ratio: 1 / 1.4 !important;
+    max-width: 35rem;
+    margin: auto;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 2rem 3rem;
+}
+
+#receipt_head{
+    /* border: 2px solid green; */
+    height: 4rem;
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+#receipt_head_logo{
+    /* border: 2px solid yellow; */
+    height: 100%;
+}
+#receipt_head_logo img{
+    height: 100%;
+}
+#receipt_head_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#receipt_head_title{
+    font-weight: bold;
+    color:brown;
+    font-size: 1.2rem;
+    border-bottom: 1px solid red;
+    padding-bottom: 0.3rem;
+}
+#receipt_head_subtitle{
+    font-size: var(--receipt_font2);
+    color: brown;
+}
+/* body */
+#receipt_body{
+    /* border: 2px solid blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+#receipt_body_title{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+#receipt_body_date{
+    text-align: end;
+    font-size: var(--receipt_font1);
+}
+.receipt_body_text{
+    font-size: var(--receipt_font2);
+    color: var(--receipt_text);
+}
+/* details */
+#receipt_details{
+    /* border: 2px solid chocolate; */
+    width: 45%;
+    margin-bottom: 3rem;
+}
+.receipt_details_title{
+    font-weight: bold;
+    font-size: var(--receipt_font1);
+    padding-bottom: 2px;
+}
+.receipt_details_text{
+    font-size: var(--receipt_font2);
+    padding-bottom: 7px;
+    color: var(--receipt_text);
+}
+#receipt_sign{
+    text-align: end;
+}
+#receipt_sign div{
+    display: inline-block;
+    border-top: 1px solid black;
+    text-align: center;
+    font-size: var(--receipt_font1);
+}
+
+@media (max-width:768px) {
+    #receipt{
+        width: 90%;
+    }
+    #triangle_bottomleft1 {
+        border-right: 20rem solid transparent;
+    }
+    :root{
+        --receipt_font1:0.8rem;
+        --receipt_font2:0.7rem;
+    }
+}
+@media (max-width:500px) {
+    #triangle_bottomleft1 {
+        border-right: 20rem solid transparent;
+    }
+    #receipt_head{
+        height: 3rem;
+    }
+    :root{
+        --receipt_font1:0.7rem;
+        --receipt_font2:0.6rem;
+    }
+}
